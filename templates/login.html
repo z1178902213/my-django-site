@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- 当进行post请求的时候，由于django的安全机制会无法进行请求，需要关闭settings的MIDDLEWARE中csrf字段 -->
+{# action指定表单提交后的路由跳转路径，一种是直接写死，另一种可以写成{% url '别名' %}的形式 #}
+    <form action="{% url 'post' %}" method="post">
+        <label name="username">用户名：</label>
+        <input name="username" id="username"/>
+        <label name="password">密码：</label>
+        <input name="password" id="password"/>
+        <input type="submit" value="提交"/>
+    </form>
+</body>
+</html>

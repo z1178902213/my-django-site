@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="{% url 'user' %}" method="post">
+        <label name="username">用户名：</label>
+        <input name="username" id="username"/>
+        <label name="gender">性别：</label>
+        <input name="gender" id="gender"/>
+        <input type="submit" value="提交"/>
+    </form>
+</body>
+</html>

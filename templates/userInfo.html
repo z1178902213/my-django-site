@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for user_obj in user_objs %}
+<p>用户ID：{{ user_obj.uid }}</p>
+<p>用户名：{{ user_obj.username }}</p>
+<p>性别：{{ user_obj.gender }}</p>
+<p>-----------------------</p>
+{% endfor %}
+
+
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% load mytags %}
+<p>{{ 5|multi:3 }}</p>
+{% fuckthat 5 5 5 %}
+
+
+<ul>
+    {% for li in list %}
+    <li>
+        {{ forloop.counter }}.{{ li }}
+    </li>
+{% endfor %}
+</ul>
+{% for key, val in dic.items %}
+    {{ key }}: {{ val }}
+{% endfor %}
+{% if dic.age >= 20 %}
+    <p>傻逼</p>
+{% else %}
+    <p>傻屌</p>
+{% endif %}
+<p>
+    {{ string|truncatechars:4 }}
+</p>
+<p>现在的时间是：{{ currentTime }}</p>
+{{ href|safe }}
+</body>
+</html>
